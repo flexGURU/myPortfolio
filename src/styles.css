@@ -1,7 +1,19 @@
 @import url('https://fonts.googleapis.com/css2?family=Alex+Brush&family=Cormorant:ital,wght@0,300..700;1,300..700&family=Fredoka:wght@300..700&family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Lexend:wght@100..900&display=swap');
-@import "primeicons/primeicons.css";
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+.btn {
+    @apply p-3 bg-body text-white border rounded-3xl drop-shadow-md shadow-black duration-200 hover:text-body hover:bg-white;
+}
+
+.card {
+    @apply bg-innerbody text-white p-3 border rounded-lg border-slate-500 flex flex-col gap-2 transition-transform ease-in-out hover:scale-105 duration-500 cursor-pointer;
+}
+
+.skills-card {
+    @apply bg-innerbody text-white p-4 border rounded-lg border-slate-500 flex flex-col items-center gap-4;
+}
 
