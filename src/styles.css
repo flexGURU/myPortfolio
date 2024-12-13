@@ -6,7 +6,7 @@
 
 
 .btn {
-    @apply p-3 bg-body text-white border rounded-3xl drop-shadow-md shadow-black duration-200 hover:text-body hover:bg-white;
+    @apply p-3 bg-innerbody text-white border rounded-3xl drop-shadow-md shadow-black duration-200 hover:text-body hover:bg-white;
 }
 
 .card {
@@ -15,5 +15,9 @@
 
 .skills-card {
     @apply bg-innerbody text-white p-4 border rounded-lg border-slate-500 flex flex-col items-center gap-4;
+}
+
+.input {
+    @apply border border-green-200 bg-innerbody text-white p-2 rounded-lg text-sm;
 }
 
