@@ -9,4 +9,7 @@ import { Component } from '@angular/core';
 })
 export class ContactComponent {
 
+  goToUrl(url){
+    window.open(url, "_blank")
+  }
 }
