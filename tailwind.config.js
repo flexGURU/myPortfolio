@@ -6,12 +6,13 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        body: ["Lexend"]
+        body: ["Lexend"],
+        alexbrush: ["Alex Brush"],
       },
       colors: {
         body: "#2a2f34",
         innerbody: "#1a1d1f",
-      }
+      },
     },
   },
   plugins: [],

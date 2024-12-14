@@ -3,70 +3,27 @@
     <div class="text-center md:mb-10">
         <hr class="w-1/4 mx-auto mb-4">
         
-        <h1 class="text-4xl text-white font-bold mb-4">JOURNEY TRAJECTORY</h1>
+        <h1 class="text-3xl md:text-4xl text-white font-bold mb-4">JOURNEY TRAJECTORY</h1>
         <i class="fa-solid fa-briefcase text-white text-3xl animate-bounce"></i>
         
     </div>
 
-    <div class="max-w-screen-lg grid grid-cols-2 gap-3 mx-auto justify-center ">
-        <div class="relative p-4  flex flex-col gap-2 border rounded-lg border-slate-500 bg-innerbody">
+    <div class="max-w-screen-lg grid grid-cols-1 md:grid-cols-2 gap-3 mx-auto justify-center ">
+        <div 
+        *ngFor="let exp of exps"
+        class="relative p-4  flex flex-col gap-2 border rounded-lg border-slate-500 bg-innerbody">
 
-            <h1 class="text-white  text-3xl">Chief Transformation Architect</h1>
-            <p class="text-green-200">QuantumLeap Innovations</p>
-            <div class="text-black p-1 rounded-lg w-fit text-sm bg-white">2021 - Present</div>
-            <ul class="text-white text-sm tracking-wider">
-                <li><i class="fa-solid fa-arrow-trend-up m-1 text-green-200"></i>Engineered paradigm-shifting digital ecosystems</li>
-                <li><i class="fa-solid fa-arrow-trend-up m-1 text-green-200"></i>Engineered paradigm-shifting digital ecosystems</li>
-                <li><i class="fa-solid fa-arrow-trend-up m-1 text-green-200"></i>Engineered paradigm-shifting digital ecosystems</li>
+            <h1 class="text-white  text-3xl"> {{exp.title}} </h1>
+            <p class="text-green-200"> {{exp.company}} </p>
+            <div class="text-black p-1 rounded-lg w-fit text-sm bg-white"> {{exp.dates}} </div>
+            <ul 
+            *ngFor="let highlight of exp.highlights"
+            class="text-white text-sm tracking-wider">
+                <li><i class="fa-solid fa-arrow-trend-up m-1 text-green-200"></i> {{highlight}} </li>
+               
             </ul>
             <div class="absolute right-0 pr-3 mt-8">
-                <h1 class="text-3xl font-bold text-green-200 opacity-15">01</h1>
-            </div>
-
-        </div>
-        
-        <div class="relative p-4  flex flex-col gap-2 border rounded-lg border-slate-500 bg-innerbody">
-
-            <h1 class="text-white  text-3xl">Chief Transformation Architect</h1>
-            <p class="text-green-200">QuantumLeap Innovations</p>
-            <div class="text-black p-1 rounded-lg w-fit text-sm bg-white">2021 - Present</div>
-            <ul class="text-white text-sm tracking-wider">
-                <li><i class="fa-solid fa-arrow-trend-up m-1 text-green-200"></i>Engineered paradigm-shifting digital ecosystems</li>
-                <li><i class="fa-solid fa-arrow-trend-up m-1 text-green-200"></i>Engineered paradigm-shifting digital ecosystems</li>
-                <li><i class="fa-solid fa-arrow-trend-up m-1 text-green-200"></i>Engineered paradigm-shifting digital ecosystems</li>
-            </ul>
-            <div class="absolute right-0 pr-3 mt-8">
-                <h1 class="text-3xl font-bold text-green-200 opacity-15">01</h1>
-            </div>
-
-        </div>
-        <div class="relative p-4  flex flex-col gap-2 border rounded-lg border-slate-500 bg-innerbody">
-
-            <h1 class="text-white  text-3xl">Chief Transformation Architect</h1>
-            <p class="text-green-200">QuantumLeap Innovations</p>
-            <div class="text-black p-1 rounded-lg w-fit text-sm bg-white">2021 - Present</div>
-            <ul class="text-white text-sm tracking-wider">
-                <li><i class="fa-solid fa-arrow-trend-up m-1 text-green-200"></i>Engineered paradigm-shifting digital ecosystems</li>
-                <li><i class="fa-solid fa-arrow-trend-up m-1 text-green-200"></i>Engineered paradigm-shifting digital ecosystems</li>
-                <li><i class="fa-solid fa-arrow-trend-up m-1 text-green-200"></i>Engineered paradigm-shifting digital ecosystems</li>
-            </ul>
-            <div class="absolute right-0 pr-3 mt-8">
-                <h1 class="text-3xl font-bold text-green-200 opacity-15">01</h1>
-            </div>
-
-        </div>
-        <div class="relative p-4  flex flex-col gap-2 border rounded-lg border-slate-500 bg-innerbody">
-
-            <h1 class="text-white  text-3xl">Chief Transformation Architect</h1>
-            <p class="text-green-200">QuantumLeap Innovations</p>
-            <div class="text-black p-1 rounded-lg w-fit text-sm bg-white">2021 - Present</div>
-            <ul class="text-white text-sm tracking-wider">
-                <li><i class="fa-solid fa-arrow-trend-up m-1 text-green-200"></i>Engineered paradigm-shifting digital ecosystems</li>
-                <li><i class="fa-solid fa-arrow-trend-up m-1 text-green-200"></i>Engineered paradigm-shifting digital ecosystems</li>
-                <li><i class="fa-solid fa-arrow-trend-up m-1 text-green-200"></i>Engineered paradigm-shifting digital ecosystems</li>
-            </ul>
-            <div class="absolute right-0 pr-3 mt-8">
-                <h1 class="text-3xl font-bold text-green-200 opacity-15">01</h1>
+                <h1 class="text-3xl font-bold text-green-200 opacity-15"> {{exp.sign}} </h1>
             </div>
 
         </div>
