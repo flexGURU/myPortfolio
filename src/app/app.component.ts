@@ -10,7 +10,8 @@ import { ContactComponent } from "./components/contact/contact.component";
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [NavbarComponent, HomeComponent, SkillsComponent, ProjectsComponent, ExperienceComponent, ContactComponent],
+  imports: [NavbarComponent, HomeComponent, SkillsComponent, 
+    ProjectsComponent, ExperienceComponent, ContactComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
@@ -27,13 +28,19 @@ export class AppComponent implements OnInit{
       
   }
 
-  scrollToPage(fragment){
-    const element = document.getElementById(fragment)
-    element.scrollIntoView({
-      behavior: 'smooth'
-    })
-
+  scrollToPage(fragment: string | null) {
+    if (fragment) {
+      const element = document.getElementById(fragment);
+      if (element) {
+        element.scrollIntoView({
+          behavior: 'smooth',
+        });
+      } else {
+        console.error(`Element with id "${fragment}" not found.`);
+      }
+    }
   }
+  
 
   
   
